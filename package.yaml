@@ -1,0 +1,31 @@
+category: Game
+maintainer: Taylor Fausak
+synopsis: tic tac toe
+description: Titato is tic tac toe.
+license: MIT
+extra-source-files:
+- CHANGELOG.md
+- LICENSE.md
+- package.yaml
+- README.md
+- stack.yaml
+executables:
+  titato:
+    dependencies:
+    - base
+    - titato
+    ghc-options:
+    - -rtsopts
+    - -threaded
+    - -with-rtsopts=-N
+    main: Main.hs
+    source-dirs: executable
+ghc-options: -Wall
+library:
+  dependencies:
+  - base ==4.8.*
+  - gloss ==1.10.*
+  - random ==1.1.*
+  source-dirs: library
+name: titato
+version: '0.1.0'
